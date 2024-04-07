@@ -12,7 +12,7 @@ def main():
 
     st.markdown("[Google Maps](https://www.google.com/maps)")
 
-    a_input = st.text_input("Ingrese la cantidad de kilómetros:")
+    a_input = st.text_input("Ingrese la distancia en kilometros:")
     
     if a_input:  # Verificar si se ingresó un valor
         try:
@@ -28,11 +28,11 @@ def main():
         precio_por_horas = int(cantidad_horas * 15)
         total = precio_por_horas + amortizacion + precio
 
-        st.write(f"El resultado de la cantidad de litros es: {int(resultado)} LITROS")
-        st.write(f"El resultado del precio es: {precio} EUROS")
+        st.write(f"Combustible: {int(resultado)} LITROS")
+        st.write(f"Precio combistible: {precio} EUROS")
         st.write(f"Amortización: {amortizacion} EUROS")
-        st.write(f"La cantidad de horas del conductor: {cantidad_horas} HORAS")
-        st.write(f"Precio por horas: {precio_por_horas} EUROS")
+        st.write(f"Conductor: {cantidad_horas} HORAS")
+        st.write(f"Precio conductor: {precio_por_horas} EUROS")
         st.write(f"Total: {total} EUROS")
 
 if __name__ == "__main__":
