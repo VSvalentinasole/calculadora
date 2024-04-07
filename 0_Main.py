@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 def regla_de_tres_combustible(a):
     if a != None:
         return (a * 8) / 100
@@ -7,7 +8,9 @@ def regla_de_tres_combustible(a):
         return 0
 
 def main():
-    st.title("Calculadora de valores")
+    st.title("Calculadora de delivery")
+
+    st.markdown("[Google Maps](https://www.google.com/maps)")
 
     a_input = st.text_input("Ingrese la cantidad de kilómetros:")
     
