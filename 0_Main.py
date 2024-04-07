@@ -24,7 +24,7 @@ def main():
         resultado = regla_de_tres_combustible(a)
         precio = round(resultado * 1.8)
         amortizacion = int(a * 0.075)
-        cantidad_horas = int(a / 50)
+        cantidad_horas = int((a*60)/50)
         precio_por_horas = int(cantidad_horas * 15)
         total = precio_por_horas + amortizacion + precio
 
