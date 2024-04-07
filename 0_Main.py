@@ -24,29 +24,17 @@ def main():
         resultado = regla_de_tres_combustible(a)
         precio = round(resultado * 1.8)
         amortizacion = int(a * 0.075)
-        if a>=50:
-            cantidad_horas = int(a/50)
-            st.write(f"Combustible: {int(resultado)} LITROS")
-            st.write(f"Precio combistible: {precio} EUROS")
-            st.write(f"Amortización: {amortizacion} EUROS")
-            st.write(f"Conductor: {cantidad_horas} HORAS")
-            precio_por_horas = int(cantidad_horas * 15)
-            st.write(f"Precio conductor: {precio_por_horas} EUROS")
-            total = precio_por_horas + amortizacion + precio
-            st.write(f"Total: {total} EUROS")
-        
-        else:
-            cantidad_horas = ((a*60)/50)
-            st.write(f"Combustible: {int(resultado)} LITROS")
-            st.write(f"Precio combistible: {precio} EUROS")
-            st.write(f"Amortización: {amortizacion} EUROS")
-            st.write(f"Conductor: {round(cantidad_horas)} MINUTOS")
-            precio_por_horas = int(cantidad_horas * 15)
-            st.write(f"Precio conductor: {precio_por_horas} EUROS")
-            total = precio_por_horas + amortizacion + precio
-            st.write(f"Total: {total} EUROS")
-        
+        cantidad_horas = a / 50 if a >= 50 else (a * 60) / 50
+        tiempo_unidad = "HORAS" if a >= 50 else "MINUTOS"
+        precio_por_horas = int(cantidad_horas * 15)
+        total = precio_por_horas + amortizacion + precio
 
-
+        st.write(f"Combustible: {int(resultado)} LITROS")
+        st.write(f"Precio combistible: {precio} EUROS")
+        st.write(f"Amortización: {amortizacion} EUROS")
+        st.write(f"Conductor: {round(cantidad_horas)} {tiempo_unidad}")
+        st.write(f"Precio conductor: {precio_por_horas} EUROS")
+        st.write(f"Total: {total} EUROS")
+        
 if __name__ == "__main__":
     main()
