@@ -26,20 +26,27 @@ def main():
         amortizacion = int(a * 0.075)
         if a>=50:
             cantidad_horas = int(a/50)
+            st.write(f"Combustible: {int(resultado)} LITROS")
+            st.write(f"Precio combistible: {precio} EUROS")
+            st.write(f"Amortización: {amortizacion} EUROS")
             st.write(f"Conductor: {cantidad_horas} HORAS")
-
+            precio_por_horas = int(cantidad_horas * 15)
+            st.write(f"Precio conductor: {precio_por_horas} EUROS")
+            total = precio_por_horas + amortizacion + precio
+            st.write(f"Total: {total} EUROS")
+        
         else:
             cantidad_horas = int((a*60)/50)
-            st.write(f"Conductor: {cantidad_horas} MINUTOS")
+            st.write(f"Combustible: {int(resultado)} LITROS")
+            st.write(f"Precio combistible: {precio} EUROS")
+            st.write(f"Amortización: {amortizacion} EUROS")
+            st.write(f"Conductor: {cantidad_horas} HORAS")
+            precio_por_horas = int(cantidad_horas * 15)
+            st.write(f"Precio conductor: {precio_por_horas} EUROS")
+            total = precio_por_horas + amortizacion + precio
+            st.write(f"Total: {total} EUROS")
+        
 
-        precio_por_horas = int(cantidad_horas * 15)
-        total = precio_por_horas + amortizacion + precio
-
-        st.write(f"Combustible: {int(resultado)} LITROS")
-        st.write(f"Precio combistible: {precio} EUROS")
-        st.write(f"Amortización: {amortizacion} EUROS")
-        st.write(f"Precio conductor: {precio_por_horas} EUROS")
-        st.write(f"Total: {total} EUROS")
 
 if __name__ == "__main__":
     main()
