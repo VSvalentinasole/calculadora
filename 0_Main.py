@@ -32,16 +32,16 @@ def main():
             cantidad_horas = (a * 60) / 50
             tiempo_unidad = "MINUTOS"        
         
-        st.write(f"Combustible: {int(resultado)} LITROS")
+        st.write(f"Combustible: {round(resultado)} LITROS")
         st.write(f"Precio combistible: {precio} EUROS")
         st.write(f"Amortización: {amortizacion} EUROS")
         st.write(f"Conductor: {round(cantidad_horas)} {tiempo_unidad}")
         
-        precio_hora = 15 if tiempo_unidad == "HORAS" else 0.25
-        precio_por_hora = int(precio_hora * cantidad_horas)
-        st.write(f"Precio conductor: {precio_por_hora} EUROS")
+        precio_por_unidad = 15 if tiempo_unidad == "HORAS" else 0.25
+        precio_por_horas = (cantidad_horas * precio_por_unidad)
+        st.write(f"Precio conductor: {precio_por_horas} EUROS")
         
-        total = amortizacion + precio_por_hora + precio
+        total = amortizacion + precio_por_horas + precio
         st.write(f"Total: {total} EUROS")
         
 if __name__ == "__main__":
