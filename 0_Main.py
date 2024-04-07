@@ -26,7 +26,7 @@ def main():
         amortizacion = round(a * 0.075)
         if a>=50:
             cantidad_horas = (a/60)
-            st.write(f"Combustible (8 LITROS/100km): {round(resultado)} LITROS")
+            st.write(f"Combustible (8 LITROS/100KM): {round(resultado)} LITROS")
             st.write(f"Precio combistible (1.8 EUROS/LITRO): {precio} EUROS")
             st.write(f"Amortización (7.5 CENT/KM): {amortizacion} EUROS")
             st.write(f"Conductor (60KM/H): {round(cantidad_horas)} HORAS")
@@ -37,7 +37,7 @@ def main():
         
         else:
             cantidad_horas = ((a*60)/60)
-            st.write(f"Combustible (8 LITROS/100km): {round(resultado)} LITROS")
+            st.write(f"Combustible (8 LITROS/100KM): {round(resultado)} LITROS")
             st.write(f"Precio combistible (1.8 EUROS/LITRO): {precio} EUROS")
             st.write(f"Amortización (7.5 CENT/KM): {amortizacion} EUROS")
             st.write(f"Conductor (60KM/H): {round(cantidad_horas)} MINUTOS")
