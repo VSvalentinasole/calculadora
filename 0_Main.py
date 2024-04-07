@@ -24,14 +24,20 @@ def main():
         resultado = regla_de_tres_combustible(a)
         precio = round(resultado * 1.8)
         amortizacion = int(a * 0.075)
-        cantidad_horas = int((a*60)/50)
+        if a>=50:
+            cantidad_horas = int(a/50)
+            st.write(f"Conductor: {cantidad_horas} HORAS")
+
+        else:
+            cantidad_horas = int((a*60)/50)
+            st.write(f"Conductor: {cantidad_horas} MINUTOS")
+
         precio_por_horas = int(cantidad_horas * 15)
         total = precio_por_horas + amortizacion + precio
 
         st.write(f"Combustible: {int(resultado)} LITROS")
         st.write(f"Precio combistible: {precio} EUROS")
         st.write(f"Amortización: {amortizacion} EUROS")
-        st.write(f"Conductor: {cantidad_horas} HORAS")
         st.write(f"Precio conductor: {precio_por_horas} EUROS")
         st.write(f"Total: {total} EUROS")
 
